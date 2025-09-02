@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/home.html"
+    },
+    {
+      "src": "/game",
+      "dest": "/game.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
