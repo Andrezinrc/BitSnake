@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <title>Jogo da cobrinha</title>
+</head>
+<body>
+  <div class="container">
+    <canvas id="gameCanvas"></canvas>
+
+    <!--Messagem vitoria ou derrota-->
+    <h2 id="mensagem-final"></h2>
+    
+    <!--Botao Jogar novamente-->
+    <button class="jogar-novamente" id="jogarNovamente" onclick="Carregar()"></button>
+    
+    <!--Botao voltar-->
+    <button class="botao-voltar" id="voltar" onclick="Voltar">Voltar</button>
+    
+    <!--Botao pausar-->
+    <button class="botao-pause" id="pausar"></button>
+    
+    <!--Botao continuar-->
+    <button class="continuar" id="continuar">Continuar</button>
+    
+    <!--Botao sair-->
+    <button class="sair" id="sair">Sair</button>
+    
+    <!--Score-->
+    <div id="pontuacao" class="pontuacao">Bytes: 0</div>
+    <!--tempo de jogo-->
+    <p id="tempo" class="tempo">0</p>
+    <!--Tempo do poder-->
+    <p id="tempo-poder" class="tempo-poder"></p>
+</div>
+
+  <script src="src/loader.js"></script>
+  <script src="src/buttonEvents.js"></script>
+  <script type="module" src="src/controles.js"></script>
+  <script src="src/preventDoubleTap.js"></script>
+  <script type="module" src="src/game.js"></script>
+  <script type="module" src="src/home.js"></script>
+  </body>
+</html>
