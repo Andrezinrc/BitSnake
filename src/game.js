@@ -600,10 +600,16 @@ var meuGame = () => {
             if (isCabeca) {
                 ctx.fillStyle = "#00ffaa";
                 ctx.fillRect(x, y, gs.tamanhoDaPeca - 1, gs.tamanhoDaPeca - 1);
+                
+                // Nome acima da cabeça do jogador
+                ctx.fillStyle = "#00ff66";
+                ctx.font = "bold 10px 'Courier New', monospace";
+                ctx.textAlign = "center";
+                ctx.fillText("Me", x + gs.tamanhoDaPeca / 2, y - 8);
             } else {
                 ctx.fillStyle = "#00261a";
                 ctx.fillRect(x, y, gs.tamanhoDaPeca - 1, gs.tamanhoDaPeca - 1);
-    
+                
                 // bits verdes
                 ctx.fillStyle = "rgba(0,255,140,0.5)";
                 ctx.font = "bold 10px monospace";
@@ -708,6 +714,12 @@ var meuGame = () => {
                     // Bordas
                     ctx.strokeStyle = "#000";
                     ctx.strokeRect(x, y - 6, larguraMax, alturaBarra);
+                    
+                    // Nome acima da cabeça
+                    ctx.fillStyle = "red";
+                    ctx.font = "bold 10px 'Courier New', monospace";
+                    ctx.textAlign = "center";
+                    ctx.fillText("BitSnake", x + gs.tamanhoDaPeca / 2, y - 10);
                 }
                 
                 if (!isCabeca) {
@@ -718,7 +730,7 @@ var meuGame = () => {
                 }
             }
             
-            ctx.restore();//garante que o alpha volte ao normal
+            ctx.restore(); //garante que o alpha volte ao normal
             
         } else if (ultimaPosicao) {
             //desenha o X no local da última posição
@@ -729,7 +741,6 @@ var meuGame = () => {
             ctx.fillText("X", x, y);
         }
     }
-    
     
     //desenha rastro cobra inimiga
     function atualizaRastroInimiga() {
